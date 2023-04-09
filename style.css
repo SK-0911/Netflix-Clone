@@ -1,0 +1,78 @@
+:root{
+    --brand-color: #E50815;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    color: white;
+}
+
+select {                /*This will remove the default arrow in the select box*/
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+}
+
+.header{
+    height: 90vh;
+    background-image: url("assets/bg.jpeg");
+}
+
+.container{
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.lang{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.navbar{
+    margin: 0 100px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    /*border: 2px solid white;*/
+}
+
+.right-half{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.drop-down-container{
+    position: relative;
+}
+.globe{
+    left: 4px;
+    right: 8px;
+}
+.globe, .down-arrow{
+    position: absolute;
+    top: 5px;
+}
+
+.down-arrow{
+    right: 0;
+    top: 6px;
+}
+
+.btn{
+    background-color: var(--brand-color);
+    padding: 8px 15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+

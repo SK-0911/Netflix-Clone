@@ -1,73 +1,86 @@
-:root{
+:root {
     --brand-color: #E50815;
+    --border: 1px solid #535251;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
 }
 
-select {                /*This will remove the default arrow in the select box*/
+.header, .body-section, .faq-container {
+    border-bottom: 5px solid #535251;
+}
+
+select { /*This will remove the default arrow in the select box*/
     /* for Firefox */
     -moz-appearance: none;
     /* for Chrome */
     -webkit-appearance: none;
 }
 
-.header{
+.header {
     height: 90vh;
     background-image: url("assets/bg.jpeg");
 }
 
-.container{
+.container {
     height: 100%;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
-    background-color: rgba(0,0,0,0.4);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.lang{
-    background-color: rgba(0,0,0,0.7);
+.lang {
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 10px 30px;
-    border: none;
+    padding: 10px 35px; /*first value is for top and bottom and second value is for left and right*/
+    border: var(--border);
     border-radius: 5px;
 }
 
-.navbar{
+.navbar {
     margin: 0 100px;
     padding-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*This will make the logo and the nav items to be at the extreme left and right*/
     /*border: 2px solid white;*/
 }
 
-.right-half{
+.right-half {
     display: flex;
     gap: 40px;
     align-items: center;
 }
-.drop-down-container{
+
+.drop-down-container {
     position: relative;
 }
-.globe{
+
+.globe {
+    width: 10px;
     left: 4px;
     right: 8px;
 }
-.globe, .down-arrow{
+
+.globe, .down-arrow {
     position: absolute;
     top: 5px;
 }
 
-.down-arrow{
+.down-arrow {
     right: 0;
     top: 6px;
 }
 
-.btn{
+.btn {
     background-color: var(--brand-color);
     padding: 8px 15px;
     border: none;
@@ -76,3 +89,222 @@ select {                /*This will remove the default arrow in the select box*/
     box-sizing: border-box;
 }
 
+/* Header Content*/
+
+.content {
+    margin: 25vh auto; /*first value is for top and bottom and second value is for left and right*/
+    width: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /*main axis is vertical and cross axis is horizontal*/
+    align-items: center; /*This will make the content to be in the center horizontally*/
+
+}
+
+.content h1, .content p {
+    margin-top: 2px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.content p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.email-container {
+    display: flex;
+    gap: 20px;
+    width: 70%;
+    margin-top: 20px;
+}
+
+.email-container input {
+    flex-grow: 1; /*This will make the input field to take the remaining space*/
+    background-color: rgba(0, 0, 0, 0.7);
+    border: var(--border);
+    padding: 0 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.email-container button {
+
+}
+
+.get-started {
+    display: flex;
+    align-items: center; /*This will make the content to be in the center horizontally*/
+    font-size: 24px;
+}
+
+.get-started span {
+    font-size: 30px;
+}
+
+/* TV */
+
+.body-section {
+    display: flex;
+    align-items: center;
+    padding: 40px 100px;
+}
+
+/* video inside the tv */
+.right-item {
+    position: relative;
+}
+
+.right-item video {
+    position: absolute;
+    left: 80px;
+    top: 20%;
+    z-index: -1;
+}
+
+.left-item h1, .right-item h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.left-item p, .right-item p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Download App */
+.layout {
+    border: var(--border);
+    border-radius: 10px;
+    background-color: black;
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.layout p {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout p span {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #0071eb;
+}
+
+.layout img {
+    width: 50px;
+
+}
+
+.static-left-item {
+    position: relative;
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 40px 100px;
+    gap: 10px;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2D2D2D;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.question:hover {
+    background-color: #535251;
+}
+
+
+.faq-container h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.question h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.question span {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.faq-container > .email-container {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.faq-container .email-container input {
+    width: 50%;
+}
+
+.faq-container p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* footer */
+.footer-container {
+    padding: 100px;
+    color: #AFB1B3;
+}
+
+.footer-container a {
+    color: #AFB1B3;
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 40px 0;
+}
+
+.link-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#credit {
+    text-align: center;
+    margin: 5% 0 0 0;
+}
